@@ -81,29 +81,64 @@ Pointer to structure
 --------------------------------------------
     Passing Structure as function parameter
 */
-struct rectangle{
+// struct rectangle{
+//     int length;
+//     int breadth;
+// };
+// //Parameter is passed as reference in void initialize and void changelength
+// //  coz we need to initialize/change structure components
+// void initialize(struct rectangle *r,int l,int b){
+//     r->length=l;
+//     r->breadth=b;
+// }
+
+// int area(struct rectangle r){
+//     return  r.length*r.breadth;
+// }
+// void changelength(struct rectangle *r,int l){
+//     r->length=l;
+// }
+
+// int main(){
+//     struct rectangle r;
+//     initialize(&r,2,5);
+//     cout<<r.length<<" "<<r.breadth<<"\n";
+//     cout<<area(r)<<"\n";
+//     changelength(&r,10);
+//     cout<<r.length<<" "<<r.breadth<<"\n";
+// }
+
+/*
+    Above structure as class
+*/
+class Rectangle{
+    private:
     int length;
     int breadth;
-};
-//Parameter is passed as reference in void initialize and void changelength
-//  coz we need to initialize/change structure components
-void initialize(struct rectangle *r,int l,int b){
-    r->length=l;
-    r->breadth=b;
-}
+    
+    public:
+    // void initialize(int l,int b){
+    //     length=l;
+    //     breadth=b;
+    // }
+// Instead of the above initlialize function we can use constructor (which is same as class name)
+    Rectangle(int l,int b){
+        length=l;
+        breadth=b;
+    }
 
-int area(struct rectangle r){
-    return  r.length*r.breadth;
-}
-void changelength(struct rectangle *r,int l){
-    r->length=l;
-}
+
+    int area(){
+        return length*breadth;
+    }
+
+    void changelength(int l){
+        length=l;
+    }
+
+};
 
 int main(){
-    struct rectangle r;
-    initialize(&r,2,5);
-    cout<<r.length<<" "<<r.breadth<<"\n";
-    cout<<area(r)<<"\n";
-    changelength(&r,10);
-    cout<<r.length<<" "<<r.breadth<<"\n";
+    Rectangle r(10,5);
+    cout<<r.area()<<" ";
 }
