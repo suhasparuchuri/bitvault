@@ -1,0 +1,1 @@
+{"name":"Local: bs","url":"/Users/suhas/Documents/GitHub/bitvault/bs.cpp","tests":[{"id":1737613729384,"input":"7\n2 5 6 10 12 18 21","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/suhas/Documents/GitHub/bitvault/bs.cpp","group":"local","local":true}
