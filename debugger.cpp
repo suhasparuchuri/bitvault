@@ -2,6 +2,7 @@
 using namespace std;
 #define lli long long int
 
+// change cerr to cout to see debug output in output console
 
 //---- Debugger ---- //
 #define debarr(a,n) cout<<#a<<" : ";for(int i=0;i<n;i++) cerr<<a[i]<<" "; cerr<<endl;
